@@ -536,10 +536,12 @@ a:focus {
 
 .about_section .detail-box {
   position: relative;
+  margin-left: 75px;
+  text-align: justify;
 }
 
 .about_section .detail-box p {
-  margin-top: 5px;
+  margin-left: 15px;
 }
 
 .about_section .detail-box a {
