@@ -30,6 +30,95 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+    <style>
+      /* Example styles, adjust as needed */
+      .contact-form {
+        width: 90%;
+        height: 92%;
+        margin: 15px;
+        padding:  30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-group {
+        margin: 10px;
+        width: 100%;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      button.submit-btn {
+        padding: 8px 16px; /*Adjust padding for the button */
+        background-color: #040492;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      button.submit-btn i {
+        margin-right: 5px; /* Adjust as needed for spacing between icon and text */
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap; /* Allow boxes to wrap to the next row */
+        justify-content: space-between; /* Create space between boxes */
+      }
+
+      .contact-box {
+        width: calc(50% - 35px);
+        height: 200px;
+        /* background-color: #f4f4f4; */
+        padding: 10px;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center; /* Center items vertically */
+        opacity: 0.8; /* Initial opacity */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow effect */
+      }
+
+      .contact-box i {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      .contact-box h4 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .contact-box span {
+        font-size: 14px;
+        color: #585757;
+        display: block;
+      }
+    </style>
   </head>
 
   <body class="sub_page">
@@ -116,6 +205,9 @@
     </div>
 
     <!-- service section -->
+    <div class="heading_container heading_center layout_padding2">
+      <h2>Contact Us</h2>
+    </div>
     <div class="mapouter">
       <div class="gmap_canvas">
         <iframe
@@ -146,10 +238,77 @@
       </style>
     </div>
 
-    <section class="service_section layout_padding">
+    <section class="service_section">
       <div class="container">
-        <div class="heading_container heading_center">
-          <h2>Contact Us</h2>
+        <div class="row layout_padding">
+          <div class="col-md-6">
+            <div class="contact-info">
+              <div class="contact-box">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <h4>Our Address</h4>
+                <span>Ram Mandir Marg, Battisputali Kathmandu</span>
+              </div>
+              <div class="contact-box">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <h4>Call Us</h4>
+                <span>+977 9849216559</span>
+              </div>
+              <div class="contact-box">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <h4>Email Us</h4>
+                <span>niraulaconstruction@gmail.com</span>
+              </div>
+              <div class="contact-box">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <h4>Open Hours</h4>
+                <span>Mon - Fri: 9 AM - 6 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form class="contact-form" action="/submit-form" method="post">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
